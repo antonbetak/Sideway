@@ -1,10 +1,20 @@
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import hybridImage from "./assets/hybrid3.png";
 import playera1 from "./assets/playera1.png";
 import logo from "./assets/logo.png";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
-    <section className="min-h-screen px-10 pt-40 pb-12 flex gap-14 text-neutral-800 font-light bg-transparent">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-screen px-10 pt-40 pb-12 flex gap-14 text-neutral-800 font-light bg-transparent"
+    >
       {/* Left Column */}
       <div className="flex flex-col w-1/3">
         {/* Search */}
@@ -30,7 +40,10 @@ export default function Hero() {
         </div>
 
         {/* Go to shop button */}
-        <button className="flex items-center justify-between w-64 px-6 py-3 bg-[#dcdcdc] hover:bg-[#dcdcdc] transition text-sm tracking-wide">
+        <button
+          onClick={() => navigate("/inicio")}
+          className="flex items-center justify-between w-64 px-6 py-3 bg-[#dcdcdc] hover:bg-[#dcdcdc] transition text-sm tracking-wide mt-10"
+        >
           <span>Go To Shop</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +82,7 @@ export default function Hero() {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
+
