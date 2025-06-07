@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo moderno tipo tela diagonal */
+body {
+  color: #262626;
+  background-color: white;
+  background-image: repeating-linear-gradient(
+      45deg,
+      #f5f5f5 0,
+      #f5f5f5 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      #f5f5f5 0,
+      #f5f5f5 1px,
+      transparent 1px,
+      transparent 20px
+    );
+  background-size: 40px 40px;
+}
