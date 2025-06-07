@@ -3,11 +3,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 import sudaderaNegra from "./assets/sudaderanegra.png";
 import sudaderaBlanca from "./assets/sudaderablanca.png";
-import logo from "./assets/isotipo.png";
+import logotipo from "./assets/isotipo.png";
 import atrasblanca from "./assets/atrasblanca.png";
 import playera1 from "./assets/playera1.png";
 import playerablanca from "./assets/playerablanca.png";
 import accesorioAw from "./assets/aw.png";
+import logo from "./assets/logo.png";
 
 // Footer dentro del mismo archivo
 function Footer() {
@@ -29,7 +30,7 @@ function Footer() {
 
         {/* Center - Logo + Marca */}
         <div className="flex flex-col items-center gap-2">
-          <img src={logo} alt="SIDEWAYS Logo" className="h-10 opacity-90" loading="lazy" />
+          <img src={logotipo} alt="SIDEWAYS Logo" className="h-10 opacity-90" loading="lazy" />
           <p className="text-3xl font-light tracking-widest text-neutral-800">SIDEWAYS</p>
         </div>
 
