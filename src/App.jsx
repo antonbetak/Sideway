@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Inicio from "./Inicio";
+import Product from "./Product"; // 👈 Importa el nuevo componente
 
 function App() {
   const location = useLocation();
@@ -14,6 +15,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Hero />} />
           <Route path="/inicio" element={<Inicio />} />
+          <Route path="/product/:id" element={<Product />} />
         </Routes>
       </AnimatePresence>
     </div>
@@ -21,4 +23,5 @@ function App() {
 }
 
 export default App;
+
 
