@@ -1,6 +1,6 @@
 import { Menu, ShoppingBag, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import isotipo from "./assets/isotipo.png";
+import isotipo from "./assets/logosinfondo.png";
 
 export default function Navbar() {
   const navigate = useNavigate();
